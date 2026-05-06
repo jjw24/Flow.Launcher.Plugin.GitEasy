@@ -33,7 +33,7 @@ jobs:
           cd Flow.Launcher.Plugin.GitEasy
           dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.GitEasy.csproj
           7z a -tzip "Flow.Launcher.Plugin.GitEasy.zip" "./bin/Release/Plugins/Flow.Launcher.Plugin.GitEasy/win-x64/publish/*"
-          ls -la ./
+          ls ./
           pwd
       
       - name: Upload Artifact
