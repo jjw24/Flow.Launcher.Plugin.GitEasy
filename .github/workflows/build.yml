@@ -40,4 +40,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Flow.Launcher.Plugin.GitEasy
-          path: Flow.Launcher.Plugin.GitEasy.zip
+          path: .\Flow.Launcher.Plugin.GitEasy\Flow.Launcher.Plugin.GitEasy.zip
