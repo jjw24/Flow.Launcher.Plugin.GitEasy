@@ -32,12 +32,9 @@ jobs:
         run: |
           cd Flow.Launcher.Plugin.GitEasy
           dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.GitEasy.csproj
-          7z a -tzip "Flow.Launcher.Plugin.GitEasy.zip" "./bin/Release/Plugins/Flow.Launcher.Plugin.GitEasy/win-x64/publish/*"
-          ls ./
-          pwd
       
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Flow.Launcher.Plugin.GitEasy
-          path: .\Flow.Launcher.Plugin.GitEasy\Flow.Launcher.Plugin.GitEasy.zip
+          path: ./Flow.Launcher.Plugin.GitEasy/bin/Release/Plugins/Flow.Launcher.Plugin.GitEasy/win-x64/publish

@@ -1,4 +1,4 @@
-﻿using Flow.Launcher.Plugin.GitEasy.Models.Commands.EventArgs;
+using Flow.Launcher.Plugin.GitEasy.Models.Commands.EventArgs;
 using Flow.Launcher.Plugin.GitEasy.Models.Commands.Options;
 using Flow.Launcher.Plugin.GitEasy.Services.Interfaces;
 using System;
@@ -65,7 +65,8 @@ public class GitCommandService : IGitCommandService
         ProcessStartInfo info = new()
         {
             FileName = gitPath,
-            WorkingDirectory = options.DestinationFolder
+            WorkingDirectory = options.DestinationFolder,
+            CreateNoWindow = true
         };
 
         info.ArgumentList.Add("clone");
@@ -86,6 +87,7 @@ public class GitCommandService : IGitCommandService
         {
             FileName = gitPath,
             WorkingDirectory = options.RepoPath,
+            CreateNoWindow = true
         };
 
         info.ArgumentList.Add("fetch");
